@@ -1,0 +1,33 @@
+package com.github.alfonsoleandro.loveheadcrafting.masks.defaultmasks.cow;
+
+import com.github.alfonsoleandro.loveheadcrafting.LoveHeadCrafting;
+import com.github.alfonsoleandro.loveheadcrafting.events.maskeffects.HigherDamageWithEffects;
+import com.github.alfonsoleandro.loveheadcrafting.events.maskeffects.PreventNegativeEffects;
+import com.github.alfonsoleandro.loveheadcrafting.masks.Mask;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashSet;
+import java.util.List;
+
+public class COW4 extends Mask {
+
+    public COW4(String skinUrl, String itemName, List<String> itemLore) {
+        super(null, "COW4", skinUrl, itemName, itemLore);
+    }
+
+    @Override
+    public void start(Player player){
+        LoveHeadCrafting plugin = JavaPlugin.getPlugin(LoveHeadCrafting.class);
+        Listener preventNegativeEffects = new PreventNegativeEffects(player, 70, maskType, null);
+        Listener moreDamageWithNegative = new HigherDamageWithEffects(player,
+                PreventNegativeEffects.negativeEffects, 1.5);
+        listeners.put(player, new HashSet<Listener>(){{
+            add(preventNegativeEffects);
+            add(moreDamageWithNegative);}});
+        Bukkit.getPluginManager().registerEvents(preventNegativeEffects, plugin);
+        Bukkit.getPluginManager().registerEvents(moreDamageWithNegative, plugin);
+    }
+}

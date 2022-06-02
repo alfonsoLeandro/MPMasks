@@ -1,0 +1,36 @@
+name: MPLoveHeadCrafting
+version: ${project.version}
+main: com.github.alfonsoleandro.loveheadcrafting.LoveHeadCrafting
+api-version: "1.13"
+authors: [lelesape]
+description: ${project.description}
+website: http://bit.ly/2mwvHWN
+depend: [MPLoveExp]
+
+commands:
+  loveHeadCrafting:
+    description: Main command
+    aliases: [lhc, hc]
+    usage: Command was not registered properly.
+
+permissions:
+  loveHeadCrafting.version:
+    description: Allows you to check the plugins version
+    default: op
+  loveHeadCrafting.reload:
+    description: Allows you to reload the plugin
+    default: op
+  loveHeadCrafting.giveMask:
+    description: Allows you to get any mask
+    default: op
+  loveHeadCrafting.items:
+    description: Allows you to get set or remove any of the special items in the items.yml file.
+    default: op
+  loveHeadCrafting.*:
+    description: Gives access to every permission available
+    default: op
+    children:
+      loveHeadCrafting.version: true
+      loveHeadCrafting.reload: true
+      loveHeadCrafting.giveMask: true
+      loveHeadCrafting.items: true

@@ -1,0 +1,66 @@
+no permission: '&cNo permission'
+reloaded: '&aPlugin reloaded!'
+unknown command: '&cUnknown command. &fTry /%command% help'
+cannot send from console: '&cYou cannot send that command from the console.'
+# Message sent when a player tries to give or get a mask and the mask is invalid.
+# %type%: The type of mask put by the user.
+invalid mask type: '&cMask type %type% does not exist or has not been loaded/registered.'
+# Message sent when a player tries to give a mask to a player that does not exist.
+# %player%: The player put by the user.
+invalid player: '&cPlayer %player% does not exist or is not online.'
+# Message sent when a player adds a mask to their own inventory
+# %amount%: The amount of masks added to the player's inventory
+# %type%: The type of mask received.
+added mask yourself: '&aYou just received %amount% %type% mask'
+# Message sent when a player tries to add a mask to their own inventory but it is full.
+full inventory: '&cYour inventory is full, nothing has been added to your inventory'
+# Message sent when adding a mask to another player's inventory
+# %amount%: the amount of masks added to the player.
+# %type%: The type of mask added.
+# %player%: The name of the player that has been added a mask.
+added mask to player: '&aSuccessfully added %amount% %type% mask to %player%''s inventory'
+# Message sent when a player sends a mask to another player
+# %player%: The player sending the mask.
+# %amount%: The amount of masks given.
+# %type%: The type of the masks.
+received mask from player: '&a%player% has sent you %amount% %type% masks'
+# Message sent when trying to add masks to another player's inventory but their inventory is full.
+# %player%: the player with the full inventory.
+player has full inventory: '&c%player% has a full inventory'
+# Message sent when setting an item in the items.yml file.
+# %name%: The name of the item.
+item saved: '&aItem "%name%" Successfully saved'
+# Message sent when trying to get/remove an item that is not listed in the items.yml file.
+# %name%: The name given by the player.
+nonexistent plugin: '&cThere''s no item with the name "&e%name%&c"'
+# Message sent when successfully removing an item from the items.yml file.
+# %name%: The name of the item.
+item removed: '&aItem "&e%name%&a" successfully removed.'
+# Message sent when an item is given to a player's inventory.
+# %name%: The name of the item.
+item added: '&aItem "&e%name%&a" successfully added to your inventory.'
+# Message sent when a player tries to place one of this plugin's heads on the floor.
+cannot place: '&cYou shouldn''t place that head on the floor, it is highly valuable!'
+# Message sent when a player is wearing the pig mask and drinks a potion.
+# %multiplier%: The amount of times the potion length was multiplied (i.e: 1.1 for the PIG1 mask)
+potion extended by pig mask: '&aYour potion''s length has been multiplied by %multiplier%'
+# Message sent when a special drop is caught using a mask like the ocelot mask
+# %mask%: The mask type.
+# %item%: The type of the item that was fished.
+special drop fished: '&aYou have caught some &c%type% &athanks to your &c%mask% &amask'
+# Name for each of the wolves that spawn when having a wolf mask.
+wolves name: '&c&lRaging wolf'
+# Message sent when having a mask like the COW mask and preventing a negative effect from being applied to a player.
+# %mask%: The mask type.
+# %effect%: The type of the effect.
+negative effect cancelled: '&aYour %mask% mask prevented you from getting %effect%!'
+# Message sent when having a mask like the MOOSHROOM mask and receiving damage from another entity
+# and therefore receiving "good" effects.
+# %effects%: The effects received.
+# %mask%: The mask type that gave this player these effects.
+received potion effect: '&aReceived %effects% thanks to your %mask% mask for receiving damage'
+# Message sent when having a mask like the CHICKEN mask and receiving damage (fall damage in this case) but, preventing
+# it tahnks to the mask.
+# %mask%: The type of mask the player was wearing.
+# %cause%: The cause of the damage (FALL for the chicken mask).
+damage prevented: '&fYour %mask% mask just saved you from receiving %cause% damage!'

@@ -1,0 +1,771 @@
+prefix: '&f[&eLoveCraftHeadCrafting&f]'
+# Whether to allow players to place this plugin's masks on the floor or not.
+allow placing: false
+# The possible items (from items.yml) that fishing can drop when using a mask that drops special items/rare loot
+# when fishing, i.e: sheep mask.
+# The more an item is mentioned in this list, the more likely it drops (when it drops, this means
+# that even if you mention an item a lot of times in this list, rare loot is equally possible to get when fishing)
+possible fishing drops:
+  - gApple
+  - gApple
+  - leather boots
+  - leather boots
+  - leather boots
+  - leather boots
+  - leather boots
+  - leather boots
+  - leather boots
+  - leather boots
+  - book
+# The custom masks and their options. You can add/remove as many as you want.
+# The format is the following:
+# MASKNAME: (MOBLEVEL) (i.e: PIG1)
+#   url: SKIN URL FROM minecraft-heads.com
+#   name: THE NAME FOR THE ITEM
+#   lore: THE LORE FOR THE ITEM
+#     - LINE1 (add as many as you want)
+#   recipe: THE RECIPE FOR THIS ITEM
+#     LETTER: MASK/ENTITY_HEAD,AMOUNT
+#   THE FORMAT FOR THE CRAFTING TABLE IS THE FOLLOWING:
+#   A  B  C
+#   D  E  F  -> MASKNAME
+#   G  H  I
+# Any of those letter can be lacking, but there must be at least one.
+masks:
+  PIG1:
+    url: 621668ef7cb79dd9c22ce3d1f3f4cb6e2559893b6df4a469514e667c16aa4
+    name: '&d&lPig mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- increased potion effect time &e(1.1x)'
+    recipe:
+      A: PIG,64
+      B: PIG,64
+      C: PIG,64
+      D: PIG,64
+      E: PIG,64
+      F: PIG,64
+      G: PIG,64
+      H: PIG,64
+      I: PIG,64
+  PIG2:
+    url: 1b297dd7fd63a1b52e4032ce93073425569747bdccbb3bec2c05977127cd17e4
+    name: '&d&lPig mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- increased potion effect time &e(1.3x)'
+    recipe:
+      A: PIG,64
+      B: PIG,64
+      C: PIG,64
+      D: PIG,64
+      E: PIG1,1 #PIG1 = 576 PIG heads
+      F: PIG,64
+      G: PIG,64
+      H: PIG,64
+      I: PIG,64
+  PIG3:
+    url: a7f4868625d5621c4aa3a94cb4e99a6b62a968cd730a4f2f147934ecf7e265b
+    name: '&d&lPig mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- increased potion effect time &e(1.5x)'
+    recipe:
+      A: PIG,64
+      B: PIG,64
+      C: PIG,64
+      D: PIG,64
+      E: PIG2,1
+      F: PIG,64
+      G: PIG,64
+      H: PIG,64
+      I: PIG,64
+  PIG4:
+    url: f35bb4c46a3a334dccb6742ab5f94651b249dec0707fcb7ae12b9e5996402f2d
+    name: '&d&lPig mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- increased potion effect time &e(2.0x)'
+      - '&f- &a&l+ &fpermanent saturation'
+    recipe:
+      A: PIG,64
+      B: PIG,64
+      C: PIG,64
+      D: PIG,64
+      E: PIG3,1
+      F: PIG,64
+      G: PIG,64
+      H: PIG,64
+      I: PIG,64
+  PIG5:
+    url: 8ea3ddc917d6ebd8aeec7fdfdaf326d8c6feae3df564cd2737ddca745f5e7b1
+    name: '&d&lPig mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- increased potion effect time &e(2.5x)'
+      - '&f- &a&l+ &fpermanent saturation'
+      - '&f- &c50% &fchance to not waste a golden apple'
+      - '&fwhen eating one'
+    recipe:
+      A: PIG,64
+      B: PIG,64
+      C: PIG,64
+      D: PIG,64
+      E: PIG4,1
+      F: PIG,64
+      G: PIG,64
+      H: PIG,64
+      I: PIG,64
+  WOLF1:
+    url: 69d1d3113ec43ac2961dd59f28175fb4718873c6c448dfca8722317d67
+    name: '&d&lWolf mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to spawn 1 wolf to help you'
+      - '&ffigth your enemies'
+    recipe:
+      A: WOLF,64
+      B: WOLF,64
+      C: WOLF,64
+      D: WOLF,64
+      E: WOLF,64
+      F: WOLF,64
+      G: WOLF,64
+      H: WOLF,64
+      I: WOLF,64
+  WOLF2:
+    url: b0472d98e8e733c648960c0ff3091b80e785ba832b351892f8c1965fac3d29
+    name: '&d&lWolf mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to spawn 1 wolf to help you'
+      - '&ffigth your enemies'
+    recipe:
+      A: WOLF,64
+      B: WOLF,64
+      C: WOLF,64
+      D: WOLF,64
+      E: WOLF1,1
+      F: WOLF,64
+      G: WOLF,64
+      H: WOLF,64
+      I: WOLF,64
+  WOLF3:
+    url: d359537c15534f61c1cd886bc118774ed22280e7cdab6613870160aad4ca39
+    name: '&d&lWolf mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to spawn 2 wolves to help you'
+      - '&ffigth your enemies'
+    recipe:
+      A: WOLF,64
+      B: WOLF,64
+      C: WOLF,64
+      D: WOLF,64
+      E: WOLF2,1
+      F: WOLF,64
+      G: WOLF,64
+      H: WOLF,64
+      I: WOLF,64
+  WOLF4:
+    url: 368d4312939bb3111fae28d65d9a31e777f8f2c9fc427501cda8ffe3b367658
+    name: '&d&lWolf mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to spawn 2 wolves to help you'
+      - '&ffigth your enemies'
+    recipe:
+      A: WOLF,64
+      B: WOLF,64
+      C: WOLF,64
+      D: WOLF,64
+      E: WOLF3,1
+      F: WOLF,64
+      G: WOLF,64
+      H: WOLF,64
+      I: WOLF,64
+  WOLF5:
+    url: 91a80849c86836341841c3cd6affba8cfaeda751738ef8687641edd3b563f67c
+    name: '&d&lWolf mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to spawn 3 wolves to help you'
+      - '&ffigth your enemies'
+    recipe:
+      A: WOLF,64
+      B: WOLF,64
+      C: WOLF,64
+      D: WOLF,64
+      E: WOLF4,1
+      F: WOLF,64
+      G: WOLF,64
+      H: WOLF,64
+      I: WOLF,64
+  OCELOT1:
+    url: 51f07e3f2e5f256bfade666a8de1b5d30252c95e98f8a8ecc6e3c7b7f67095
+    name: '&d&lOcelot mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to receive rare loot from fishing'
+    recipe:
+      A: OCELOT,64
+      B: OCELOT,64
+      C: OCELOT,64
+      D: OCELOT,64
+      E: OCELOT,64
+      F: OCELOT,64
+      G: OCELOT,64
+      H: OCELOT,64
+      I: OCELOT,64
+  OCELOT2:
+    url: e012b68d7475779e15a6c20545b1579aaff484b7ab8c195ada8441d84082dbbd
+    name: '&d&lOcelot mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to receive rare loot from fishing'
+    recipe:
+      A: OCELOT,64
+      B: OCELOT,64
+      C: OCELOT,64
+      D: OCELOT,64
+      E: OCELOT1,1
+      F: OCELOT,64
+      G: OCELOT,64
+      H: OCELOT,64
+      I: OCELOT,64
+  OCELOT3:
+    url: 376eacc66016b23bc1ed87543f2f1822ad12f2f70e7d4d265f5c4aaae28f
+    name: '&d&lOcelot mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to receive rare loot from fishing'
+    recipe:
+      A: OCELOT,64
+      B: OCELOT,64
+      C: OCELOT,64
+      D: OCELOT,64
+      E: OCELOT2,1
+      F: OCELOT,64
+      G: OCELOT,64
+      H: OCELOT,64
+      I: OCELOT,64
+  OCELOT4:
+    url: 353f6a4a8e68edfc149b2e32597df3e5f4c3581f7a47c38514ab2a4eda39505d
+    name: '&d&lOcelot mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to receive rare loot from fishing'
+    recipe:
+      A: OCELOT,64
+      B: OCELOT,64
+      C: OCELOT,64
+      D: OCELOT,64
+      E: OCELOT3,1
+      F: OCELOT,64
+      G: OCELOT,64
+      H: OCELOT,64
+      I: OCELOT,64
+  OCELOT5:
+    url: 2dbaf471dec52532873572e5d7cf033ec79d6b66050eb3c4e327ba3b14018816
+    name: '&d&lOcelot mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- More chance to receive rare loot from fishing'
+    recipe:
+      A: OCELOT,64
+      B: OCELOT,64
+      C: OCELOT,64
+      D: OCELOT,64
+      E: OCELOT4,1
+      F: OCELOT,64
+      G: OCELOT,64
+      H: OCELOT,64
+      I: OCELOT,64
+  RABBIT1:
+    url: 7d1169b2694a6aba826360992365bcda5a10c89a3aa2b48c438531dd8685c3a7
+    name: '&d&lRabbit mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Permanent jump boost 1'
+    recipe:
+      A: RABBIT,64
+      B: RABBIT,64
+      C: RABBIT,64
+      D: RABBIT,64
+      E: RABBIT,64
+      F: RABBIT,64
+      G: RABBIT,64
+      H: RABBIT,64
+      I: RABBIT,64
+  RABBIT2:
+    url: b4dcfed6897a18a7ab995a66134d41a1ca821b69bcb7d14cf269b4a98df49a8
+    name: '&d&lRabbit mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Permanent jump boost 1'
+    recipe:
+      A: RABBIT,64
+      B: RABBIT,64
+      C: RABBIT,64
+      D: RABBIT,64
+      E: RABBIT1,1
+      F: RABBIT,64
+      G: RABBIT,64
+      H: RABBIT,64
+      I: RABBIT,64
+  RABBIT3:
+    url: cb8cff4b15b8ca37e25750f345718f289cb22c5b3ad22627a71223faccc
+    name: '&d&lRabbit mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Permanent jump boost 2'
+    recipe:
+      A: RABBIT,64
+      B: RABBIT,64
+      C: RABBIT,64
+      D: RABBIT,64
+      E: RABBIT2,1
+      F: RABBIT,64
+      G: RABBIT,64
+      H: RABBIT,64
+      I: RABBIT,64
+  RABBIT4:
+    url: 686ab53a34e641be5a93f6c5da7a98952d8dd8ab99a603910e897cbac2d52df
+    name: '&d&lRabbit mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Permanent jump boost 3'
+    recipe:
+      A: RABBIT,64
+      B: RABBIT,64
+      C: RABBIT,64
+      D: RABBIT,64
+      E: RABBIT3,1
+      F: RABBIT,64
+      G: RABBIT,64
+      H: RABBIT,64
+      I: RABBIT,64
+  RABBIT5:
+    url: 234cd6bbec5b4976f93e3f2415567248626877f17baf89a37220506f5957b97c
+    name: '&d&lRabbit mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Permanent jump boost 3'
+      - '&f- Permanent night vision'
+    recipe:
+      A: RABBIT,64
+      B: RABBIT,64
+      C: RABBIT,64
+      D: RABBIT,64
+      E: RABBIT4,1
+      F: RABBIT,64
+      G: RABBIT,64
+      H: RABBIT,64
+      I: RABBIT,64
+  SHEEP1:
+    url: 9a624f5966bedd6e67f654b59e9249b2ecf307d903339bc199923977f4c8c
+    name: '&d&lSheep mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Food &aregen &fwhen stepping on grass'
+    recipe:
+      A: SHEEP,64
+      B: SHEEP,64
+      C: SHEEP,64
+      D: SHEEP,64
+      E: SHEEP,64
+      F: SHEEP,64
+      G: SHEEP,64
+      H: SHEEP,64
+      I: SHEEP,64
+  SHEEP2:
+    url: 1836565c7897d49a71bc18986d1ea6561321a0bbf711d41a56ce3bb2c217e7a
+    name: '&d&lSheep mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Food &aregen &fwhen stepping on grass'
+    recipe:
+      A: SHEEP,64
+      B: SHEEP,64
+      C: SHEEP,64
+      D: SHEEP,64
+      E: SHEEP1,1
+      F: SHEEP,64
+      G: SHEEP,64
+      H: SHEEP,64
+      I: SHEEP,64
+  SHEEP3:
+    url: d9ec22818d1fbfc8167fbe36728b28240e34e16469a2929d03fdf511bf2ca1
+    name: '&d&lSheep mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Food &aregen &fwhen stepping on grass'
+      - '&f- Immunity to cactus damage'
+    recipe:
+      A: SHEEP,64
+      B: SHEEP,64
+      C: SHEEP,64
+      D: SHEEP,64
+      E: SHEEP2,1
+      F: SHEEP,64
+      G: SHEEP,64
+      H: SHEEP,64
+      I: SHEEP,64
+  SHEEP4:
+    url: fcc3d4429c1edd1a4427aa1de6ccbb7132c1f99a382292915007df058eaf9848
+    name: '&d&lSheep mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Food &aregen &fwhen stepping on grass'
+      - '&f- Immunity to cactus damage'
+    recipe:
+      A: SHEEP,64
+      B: SHEEP,64
+      C: SHEEP,64
+      D: SHEEP,64
+      E: SHEEP3,1
+      F: SHEEP,64
+      G: SHEEP,64
+      H: SHEEP,64
+      I: SHEEP,64
+  SHEEP5:
+    url: 2513d5d588af9c9e98dbf9ea57a7a1598740f21bcce133b9f9aacc67d4faa
+    name: '&d&lSheep mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Food &aregen &fwhen stepping on grass'
+      - '&f- Immunity to cactus damage'
+      - '&f- Permanent jump boost 2'
+    recipe:
+      A: SHEEP,64
+      B: SHEEP,64
+      C: SHEEP,64
+      D: SHEEP,64
+      E: SHEEP4,1
+      F: SHEEP,64
+      G: SHEEP,64
+      H: SHEEP,64
+      I: SHEEP,64
+  COW1:
+    url: 5d6c6eda942f7f5f71c3161c7306f4aed307d82895f9d2b07ab4525718edc5
+    name: '&d&lCow mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not get &cnegative &feffects'
+    recipe:
+      A: COW,64
+      B: COW,64
+      C: COW,64
+      D: COW,64
+      E: COW,64
+      F: COW,64
+      G: COW,64
+      H: COW,64
+      I: COW,64
+  COW2:
+    url: 82fa683a1c584a9723603548c8c03eaf47e8365bafc16af15b14814268c7c778
+    name: '&d&lCow mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not get &cnegative &feffects'
+    recipe:
+      A: COW,64
+      B: COW,64
+      C: COW,64
+      D: COW,64
+      E: COW1,1
+      F: COW,64
+      G: COW,64
+      H: COW,64
+      I: COW,64
+  COW3:
+    url: d3743d51f859378663e225ef0217bb2d64d6ee1665dd516451b9bc4415fb005d
+    name: '&d&lCow mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not get &cnegative &feffects'
+    recipe:
+      A: COW,64
+      B: COW,64
+      C: COW,64
+      D: COW,64
+      E: COW2,1
+      F: COW,64
+      G: COW,64
+      H: COW,64
+      I: COW,64
+  COW4:
+    url: b57957710bfd90dee97fd5ef2a91621fd46a653cac053b5f5a7e684dc5b67511
+    name: '&d&lCow mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not get &cnegative &feffects'
+      - '&f- Deal &a1.5x &fdamage when having &cnegative &feffects'
+    recipe:
+      A: COW,64
+      B: COW,64
+      C: COW,64
+      D: COW,64
+      E: COW3,1
+      F: COW,64
+      G: COW,64
+      H: COW,64
+      I: COW,64
+  COW5:
+    url: 285ca1fe9f4ba642e6bf076cdfd8f640829eef9fabb09f1b3e3462b39ad34084
+    name: '&d&lCow mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not get &cnegative &feffects'
+      - '&f- Deal &a2.0x &fdamage when having &cnegative &feffects'
+      - '&f- Total immunity to &cBlindess &f& &cnausea'
+    recipe:
+      A: COW,64
+      B: COW,64
+      C: COW,64
+      D: COW,64
+      E: COW4,1
+      F: COW,64
+      G: COW,64
+      H: COW,64
+      I: COW,64
+  MOOSHROOM1:
+    url: 2b52841f2fd589e0bc84cbabf9e1c27cb70cac98f8d6b3dd065e55a4dcb70d77
+    name: '&d&lMooshroom mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to get &eAbsorption 3 &fwhen hit'
+    recipe:
+      A: MUSHROOM_COW,64
+      B: MUSHROOM_COW,64
+      C: MUSHROOM_COW,64
+      D: MUSHROOM_COW,64
+      E: MUSHROOM_COW,64
+      F: MUSHROOM_COW,64
+      G: MUSHROOM_COW,64
+      H: MUSHROOM_COW,64
+      I: MUSHROOM_COW,64
+  MOOSHROOM2:
+    url: 880ad01c3d747636654648b8632a83542ade58a7b24351c814e35984ab01b3a5
+    name: '&d&lMooshroom mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to get &eAbsorption 3 &fwhen hit'
+    recipe:
+      A: MUSHROOM_COW,64
+      B: MUSHROOM_COW,64
+      C: MUSHROOM_COW,64
+      D: MUSHROOM_COW,64
+      E: MOOSHROOM1,1
+      F: MUSHROOM_COW,64
+      G: MUSHROOM_COW,64
+      H: MUSHROOM_COW,64
+      I: MUSHROOM_COW,64
+  MOOSHROOM3:
+    url: c819476593917da117c071b2f5a6b2fb33699774c520b74603386973b0e44eb1
+    name: '&d&lMooshroom mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to get &eAbsorption 3 &fand &eRegen 2 &fwhen hit'
+    recipe:
+      A: MUSHROOM_COW,64
+      B: MUSHROOM_COW,64
+      C: MUSHROOM_COW,64
+      D: MUSHROOM_COW,64
+      E: MOOSHROOM2,1
+      F: MUSHROOM_COW,64
+      G: MUSHROOM_COW,64
+      H: MUSHROOM_COW,64
+      I: MUSHROOM_COW,64
+  MOOSHROOM4:
+    url: aadcb1f2a69de1d659e7ceeb7c64bac6675988604b7a1415ddd020c7fa4d3d
+    name: '&d&lMooshroom mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to get &eAbsorption 3 &fand &eRegen 2 &fwhen hit'
+    recipe:
+      A: MUSHROOM_COW,64
+      B: MUSHROOM_COW,64
+      C: MUSHROOM_COW,64
+      D: MUSHROOM_COW,64
+      E: MOOSHROOM3,1
+      F: MUSHROOM_COW,64
+      G: MUSHROOM_COW,64
+      H: MUSHROOM_COW,64
+      I: MUSHROOM_COW,64
+  MOOSHROOM5:
+    url: 52bc6b2d08de171cb7b7cc7667355b617491398bdd4653a0ab045f1a8031470c
+    name: '&d&lMooshroom mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to get &eAbsorption 3 &fand &eRegen 3 &fwhen hit'
+    recipe:
+      A: MUSHROOM_COW,64
+      B: MUSHROOM_COW,64
+      C: MUSHROOM_COW,64
+      D: MUSHROOM_COW,64
+      E: MOOSHROOM4,1
+      F: MUSHROOM_COW,64
+      G: MUSHROOM_COW,64
+      H: MUSHROOM_COW,64
+      I: MUSHROOM_COW,64
+  HORSE1:
+    url: 450f992599a55a8311373a5412716bb7f91cf39afadea2517f415d72879a2
+    name: '&d&lHorse mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Inifnite &espeed 1 '
+    recipe:
+      A: HORSE,64
+      B: HORSE,64
+      C: HORSE,64
+      D: HORSE,64
+      E: HORSE,64
+      F: HORSE,64
+      G: HORSE,64
+      H: HORSE,64
+      I: HORSE,64
+  HORSE2:
+    url: 265af3923fd0b47c1e0795fb971675fce0b055dd37b1c3ce3916c24fcbf7fc3a
+    name: '&d&lHorse mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Inifnite &espeed 1 '
+    recipe:
+      A: HORSE,64
+      B: HORSE,64
+      C: HORSE,64
+      D: HORSE,64
+      E: HORSE1,1
+      F: HORSE,64
+      G: HORSE,64
+      H: HORSE,64
+      I: HORSE,64
+  HORSE3:
+    url: 8d129273b1315619b2c242dc1ed824b4a1a223c2f6da87a8175c2a7d522cd6cb
+    name: '&d&lHorse mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Inifnite &espeed 2'
+    recipe:
+      A: HORSE,64
+      B: HORSE,64
+      C: HORSE,64
+      D: HORSE,64
+      E: HORSE2,1
+      F: HORSE,64
+      G: HORSE,64
+      H: HORSE,64
+      I: HORSE,64
+  HORSE4:
+    url: 47effce35132c86ff72bcae77dfbb1d22587e94df3cbc2570ed17cf8973a
+    name: '&d&lHorse mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Inifnite &espeed 2'
+    recipe:
+      A: HORSE,64
+      B: HORSE,64
+      C: HORSE,64
+      D: HORSE,64
+      E: HORSE3,1
+      F: HORSE,64
+      G: HORSE,64
+      H: HORSE,64
+      I: HORSE,64
+  HORSE5:
+    url: 5b54f2bc2b6f59abb8c3f9d6c3a3154e3fefe238f2bad593db2de7fa3a4
+    name: '&d&lHorse mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Inifnite &espeed 3'
+    recipe:
+      A: HORSE,64
+      B: HORSE,64
+      C: HORSE,64
+      D: HORSE,64
+      E: HORSE4,1
+      F: HORSE,64
+      G: HORSE,64
+      H: HORSE,64
+      I: HORSE,64
+  CHICKEN1:
+    url: 1fe4cc963f26172bad5365aca20911ded744a2b743676b112d9a8c43ef659
+    name: '&d&lChicken mask &b&l1'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not receive &cfall damage'
+    recipe:
+      A: CHICKEN,64
+      B: CHICKEN,64
+      C: CHICKEN,64
+      D: CHICKEN,64
+      E: CHICKEN,64
+      F: CHICKEN,64
+      G: CHICKEN,64
+      H: CHICKEN,64
+      I: CHICKEN,64
+  CHICKEN2:
+    url: 598f6f7e0d2dd1d68e9fa0a486c6a22fef481dca7c281d554cf600836a03187f
+    name: '&d&lChicken mask &b&l2'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not receive &cfall damage'
+    recipe:
+      A: CHICKEN,64
+      B: CHICKEN,64
+      C: CHICKEN,64
+      D: CHICKEN,64
+      E: CHICKEN1,1
+      F: CHICKEN,64
+      G: CHICKEN,64
+      H: CHICKEN,64
+      I: CHICKEN,64
+  CHICKEN3:
+    url: d4b3c4ac97e08279ca2f8ef428e443827ac975c72924b7149557a1c6b4ca0b9
+    name: '&d&lChicken mask &b&l3'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not receive &cfall damage'
+    recipe:
+      A: CHICKEN,64
+      B: CHICKEN,64
+      C: CHICKEN,64
+      D: CHICKEN,64
+      E: CHICKEN2,1
+      F: CHICKEN,64
+      G: CHICKEN,64
+      H: CHICKEN,64
+      I: CHICKEN,64
+  CHICKEN4:
+    url: 384c0a970e291c5e877ed790ff429d57592eceb29cbbf955786e92cf13d9f701
+    name: '&d&lChicken mask &b&l4'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Chance to not receive &cfall damage'
+    recipe:
+      A: CHICKEN,64
+      B: CHICKEN,64
+      C: CHICKEN,64
+      D: CHICKEN,64
+      E: CHICKEN3,1
+      F: CHICKEN,64
+      G: CHICKEN,64
+      H: CHICKEN,64
+      I: CHICKEN,64
+  CHICKEN5:
+    url: c19dfcb244efe2b357db02b937df89a7c116d17f1b561de979865331110f226
+    name: '&d&lChicken mask &b&l5'
+    lore:
+      - '&fEquip this mask to get:'
+      - '&f- Totally &aimmune &fto &cfall damage'
+    recipe:
+      A: CHICKEN,64
+      B: CHICKEN,64
+      C: CHICKEN,64
+      D: CHICKEN,64
+      E: CHICKEN4,1
+      F: CHICKEN,64
+      G: CHICKEN,64
+      H: CHICKEN,64
+      I: CHICKEN,64
